@@ -3,6 +3,11 @@ function startQuiz() {
     scoreContainerEl.style.display = "none";
     quizContainerEl.style.display = "block";  
 }
+// create function so timer starts when i clock the start quiz button.
+function startTimer(){
+    timerEl.textContent= time;
+    setInterval
+}
 //create an array of questions for the user to answer with a list of choices
 var quizQuestions = [
 {
