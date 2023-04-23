@@ -1,3 +1,8 @@
+//Create a function so when the user clicks the start button the timmer starts for the quiz
+function startQuiz() {
+    scoreContainerEl.style.display = "none";
+    quizContainerEl.style.display = "block";  
+}
 //create an array of questions for the user to answer with a list of choices
 var quizQuestions = [
 {
@@ -10,4 +15,9 @@ var quizQuestions = [
     choices: ["A keyboard","the mouse","google","A Mentor"],
     answer: "google"
 },
+{
+    question: "Who's the real genuis from the 80's 90's tech boom?",
+    choices: ["Bill Gates", "Steve Jobs","Steve Woz Wozniak"],
+    answer: "Steve Woz Wozniak"
+}
 ];
