@@ -47,7 +47,17 @@ function displayQuestion (){
     }
 }
 //make a function to hangle a choice click event
-
+function handleChoiceClick(event) {
+    const choice = event.target.textContent;
+    const currentQuestion = quizQuestions[currentQuestionIndex];
+if (choice === currentQuestion.answer){
+    responseEl.textContent = "Correct!";
+    score += 10;
+} else {
+    responseEl.textContent = "Incorrect!";
+    time -= 10;
+}
+}  
 // create function so timer starts when i clock the start quiz button.
 function startTimer(){
     timerEl.textContent= time;
