@@ -6,8 +6,12 @@ function startQuiz() {
 // create function so timer starts when i clock the start quiz button.
 function startTimer(){
     timerEl.textContent= time;
-    setInterval
+    
 }
+const startingTime = 60;
+let time = startingTime;
+let timerIntervalId = null;
+
 //create an array of questions for the user to answer with a list of choices
 var quizQuestions = [
 {
@@ -26,3 +30,13 @@ var quizQuestions = [
     answer: "Steve Woz Wozniak"
 }
 ];
+
+//Then the user is presented with another question
+
+//Elements form html to be updated during the game
+var quizContainerEl = document.getElementById("quiz-container");
+var questionEl = document.getElementById("question");
+var choicesEl = document.getElementById("choices");
+var scoreEl = document.getElementById("score");
+var responseEl = document.getElementById("response");
+var initialsEl = document.getElementById("initials");
