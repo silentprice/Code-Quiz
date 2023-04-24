@@ -26,7 +26,7 @@ var responseEl = document.getElementById("response");
 var initialsEl = document.getElementById("initials");
 
 //Create a function so when the user clicks the start button the timmer starts for the quiz
-function startQuiz() {
+function startQuiz(button) {
     scoreContainerEl.style.display = "none";
     quizContainerEl.style.display = "block";  
     displayQuestion();
