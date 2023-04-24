@@ -42,24 +42,43 @@ function startQuiz() {
     timerInterval = setInterval(function(){
         time--;
         var timeEl = document.getElementById("time");
-    }) 
+        timeEl.textContent = time;
+        if (time<=0) {
+            endQuiz();
+        }
+    },1000); 
 }
 
 
 //make a function to display the questionss and update the choices with current question
-function displayQuestion (){
-    var currentQuestion = quizQuestions[currentQuestionIndex];
-    question.textContent = currentQuestion.question;
+function displayQuestion () {
+    var questionEl = document.getElementById("question");
+    questionel.textContent = quizQuestions[currentQuestionIndex].question;
+    var choicesEl =document.getElementById("choices");
     choicesEl.innerHTML = "";
-    for (let i = 0; i< currentQuestion.choices.length; i++){
-        var choice = currentQuestion.choices[i];
-        var choiceButton = document.createElement("button");
-        choiceButton.textContent = choice;
-        choiceButton.addEventListener("click", handleChoiceClick);
-        choices.appendChild(choiceButton);
+    for (var i = 0; i< quizQuestions[currentQuestionIndex].choices.length; i++){
+        var choiceEl = document.createElement("button");
+        choiceEl.textContent = quizQuestions[currentQuestionIndex].choices[i];
+        choiceEl.setAttribute("class", "choice");
+        choiceEl.setAttribute("value", quizQuestions[currentQuestionIndex].choices[i]);
+        choiceEl.onclick = checkAnswer;
+        choicesEl.appendChild(choiceEl);
     }
 }
-//make a function to hangle a choice click event
+//create a function to check answer beofre moving to next question
+function checkAnswer() {
+    if (this.value === quizQuestions[currentQuestionIndex].answer) {
+        score++;
+        var responseEl = document.getElementById("response");
+        responseEl.textContent = "Correct!!";
+    } else {
+        time -= 10;
+        var responseEl = document.getElementById("response");
+        responseEl.textContent = "Wrong choice!";
+    }
+    
+}
+/*//make a function to hangle a choice click event
 function handleChoiceClick(event) {
     var choice = event.target.textContent;
     var currentQuestion = quizQuestions[currentQuestionIndex];
@@ -77,7 +96,7 @@ if (currentQuestionIndex<quizQuestions.length){
 } else {
     endQuiz();
 }
-}  
+}  */
 // create function so timer starts when i clock the start quiz button.
 function startTimer(){
     timerEl.textContent= time;
