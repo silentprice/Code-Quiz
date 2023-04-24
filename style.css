@@ -5,3 +5,8 @@ header {
     background-color: beige;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
+section {
+    display: block;
+    align-content: center;
+}
