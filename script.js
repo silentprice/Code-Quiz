@@ -76,7 +76,12 @@ function checkAnswer() {
         var responseEl = document.getElementById("response");
         responseEl.textContent = "Wrong choice!";
     }
-    
+    currentQuestionIndex++;
+    if (currentQuestionIndex=== quizQuestions.length) {
+        endQuiz();
+    } else {
+        displayQuestion();
+    }
 }
 /*//make a function to hangle a choice click event
 function handleChoiceClick(event) {
@@ -113,6 +118,17 @@ function startTimer(){
 //create a function to end the quiz
 function endQuiz(){
     clearInterval(timerInterValid);
+    var quizContainerEl = document.getElementById("quiz-container");
     quizContainerEl.style.dislpay="none";
+    var scoreContainerEl = document.getElementById("score-container");
+    scoreContainerEl.style.display = "block";
+
+    var scoreEl = document.getElementById("score");
+    scoreEl.textContent = score;
+}
+function saveScore(event) {
+    event.preventDefault();
+    var initialsInputEl = document.getElementById("initials");
+    var initials = initialsInputEl.value.trim().toUpperCase();
 }
 
