@@ -33,22 +33,12 @@ var initialsEl = document.getElementById("initials");
 
 //Create a function so when the user clicks the start button the timmer starts for the quiz
 function startQuiz() {
-    var startButtonEl = document.getElementById("start-button");
+    var startButtonEl = document.getElementById("start");
     startButtonEl.style.display="none";
    //have the quiz container pop up once start is clicked
    var quizContainerEl = document.getElementById("quiz-container");
     quizContainerEl.style.display = "block";  
-    //have the timeer start for the quiz
-    timerInterval = setInterval(function(){
-        time--;
-        var timeEl = document.getElementById("time");
-        timeEl.textContent = time;
-        if (time<=0) {
-            endQuiz();
-        }
-    },1000); 
 }
-
 
 //make a function to display the questionss and update the choices with current question
 function displayQuestion () {
@@ -126,9 +116,17 @@ function endQuiz(){
     var scoreEl = document.getElementById("score");
     scoreEl.textContent = score;
 }
+//make a function to save the users score
 function saveScore(event) {
     event.preventDefault();
     var initialsInputEl = document.getElementById("initials");
     var initials = initialsInputEl.value.trim().toUpperCase();
+    if (initials !== "") {
+        var highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+        highScores.push({ initials: initials, score: score });
+        localStorage.setItem("highScores", JSON.stringify(highScores));
+        window.location.href = "highscores.html";
+      }
 }
-
+var startButtonEl = document.getElementById("start");
+startButtonEl.onclick

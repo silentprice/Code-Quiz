@@ -1,12 +1,18 @@
 header h1 {
     color: blueviolet;
+    margin-top: 2px;
 }
 header {
     background-color: beige;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 2px;
+    width: 100%;
 }
 
 section {
     display: block;
     align-content: center;
 }
+button:hover {
+    color: blue;
+  }
