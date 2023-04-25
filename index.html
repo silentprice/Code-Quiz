@@ -4,18 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Code Quiz</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
     <header>
         <h1>Code Quiz</h1>
+        <a href="highscores.html">Highscores</a>
         <div id="timer">Time: <span id="time"></span></div>
     </header>
     <main>
-        <section id="quiz-container">
+        <section class="quiz-container" id="quiz-container">
             <div id="question"></div>
             <div id="choices"></div>
             <div id="response"></div>
+            <h2 id="welcome">Welcome to the CodeQuiz press start to begin!</h2>
             <button id="start">Start</button>
         </section>
         <section id="score-container">
@@ -23,12 +25,12 @@
             <form id="initials-form">
                 <label for="initials">Enter your initials:</label>
                 <input type="text" id="initials" name="initials">
-                <button type="submit">Save Now</button>
+                <button id="save-now">Save Now</button>
             </form>
         </section>
     </main>
 
     
-    <script src="script.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
