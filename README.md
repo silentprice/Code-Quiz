@@ -10,4 +10,4 @@ First I started by created the layout for the code quiz in the index file. Addin
 * 
 
 ## Screenshot
-![screenshot](./assets/images/)
+![screenshot](./assets/images/code-quiz-screenshot.png)
