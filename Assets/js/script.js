@@ -19,6 +19,16 @@ var quizQuestions = [
     choices: ["Bill Gates", "Steve Jobs", "Steve Woz Wozniak"],
     answer: "Steve Woz Wozniak",
   },
+  {
+    question: "Which year was Javascript invented?",
+    choices: ["2000", "2005", "1995", "1999"],
+    answer: "1995",
+  },
+  {
+    question: "Steve Jobs founded which company?",
+    choices: ["Apple", "Apple store", "Pixar", "All the Above"],
+    answer: "All the Above",
+  }
 ];
 //define the array  of questions with a query selector
 var quizSelector = document.querySelector("quiz-container");

@@ -1,6 +1,8 @@
+
 header h1 {
   color: blueviolet;
   margin-top: 2px;
+  text-align: center;
 }
 header {
   background-color: beige;
@@ -9,13 +11,9 @@ header {
   width: 100%;
 }
 
-section {
-  display: block;
-  align-content: center;
-}
-
 button:hover {
   color: blue;
+ 
 }
 
 .question-container {
@@ -24,4 +22,15 @@ button:hover {
 
 #score-container {
     display: none;
+}
+
+main {
+   text-align: center;
+}
+#timer {
+  text-align: center;
+}
+#question {
+  font-size: 22px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
