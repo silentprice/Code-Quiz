@@ -10,4 +10,4 @@
 * https://silentprice.github.io/Code-Quiz/
 
 ## Screenshot
-![screenshot](./assets/images/code-quiz-screenshot.png)
+![screenshot](./Assets/images/code-quiz-screenshot.png)
